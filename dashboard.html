@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WAZWEZ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <h1 class="title-bar">WAZ<span>WEZ</span>.</h1>
+
+        <div class="col-navbar">
+            <img src="assets/Notification.png" alt="notification">
+            <div class="wrap-profile">
+                <img src="https://thumb.viva.co.id/media/frontend/tokoh/2018/07/17/5b4dc26d4a101-amanda-rigby_216_287.jpg"
+                    alt="profile">
+            </div>
+            <h1 class="text-name">Krozeo Jupiter</h1>
+            <img class="arrow" src="assets/Arrow - Down 2.png" alt="arrow-down">
+        </div>
+    </div>
+
+    <div class="todolist">
+        <div class="content">
+            <h1 class="text-title-content">MY TASK</h1>
+            <div class="header-content">
+                <div>
+                    <h1 class="title-todo-list">To Do List </h1>
+                    <p class="desc-todo-list">Buat list tugas harian saya</p>
+                </div>
+                <button class="button-add" onclick="document.getElementById('form').style.display = 'block'">
+                    <img class="icon" src="assets/Plus.svg" alt="plus">
+                    <p class="button-text">Tambah tugas</p>
+                </button>
+            </div>
+            <div class="filter">
+                <div>
+                    <h1 class="desc-sortby">Sort By</h1>
+                </div>
+                <div class="dropdown">
+                    <p class="dropdown-text">By Tanggal</p>
+                    <img src="assets/Arrow - Down 1.png" alt="arrow1">
+                </div>
+            </div>
+            <div>
+                <form class="form" onsubmit="submitData(); return false;" id="form" style="display: none;">
+                    <div class="namatugas">
+                        <!--<img src="assets/circle.png" alt="circle">-->
+                        <input type="text" id="namatugas" placeholder="Masukan nama tugas">
+                        <input type="text" id="deskripsi" placeholder="Deskripsi Tugas (Optional)">
+                        <input type="text" id="tanggal" placeholder="Tanggal & Waktu">
+                        <button type="submit">Submit</button>
+                    </div>
+                    <!--<img src="assets/circle.png" alt="circle">
+                    <input type="text" id="namatugas" placeholder="Masukan nama tugas" class="namatugas">
+                    <input type="text" id="deskripsi" placeholder="Deskripsi Tugas (Optional)">
+                    <input type="text" id="tanggal" placeholder="Tanggal & Waktu">-->
+                </form>
+            </div>
+            <div class="task">
+                <div class="task-design">
+                    <div class="design">
+                        <div class="circle">
+                            <img src="assets/circle.png" alt="circle">
+                            <div class="hari-ini">
+                                <div class="hari-ini-header">
+                                    <p class="task-text" id="namacontent">Product Design</p>
+                                    <div class="hari-ini-info">
+                                        <p class="info-text" id="tanggalcontent">Hari Ini</p>
+                                    </div>
+                                    <img src="assets/more-vertical.png" alt="more">
+                                </div>
+                                <p class="hari-ini-text" id="deskripsicontent">Tugas untuk design team</p>
+                            </div>
+                        </div>
+                        <img src="assets/Arrow - Up 2.png" alt="arrow">
+                    </div>
+                    <div class="subtaks">
+                        <div class="header-subtaks">
+                            <p class="text-subtaks">Subtask</p>
+                            <div class="plus-subtaks">
+                                <img src="assets/Plus.png" alt="plus">
+                                <p class="plus-teks">Tambah</p>
+                            </div>
+                        </div>
+                        <div class="content-subtaks">
+                            <div class="circle-subtaks">
+                                <img src="assets/circle.png" alt="circle">
+                                <p class="content-subtaks-teks">Design review</p>
+                            </div>
+                            <img src="assets/trash.png" alt="trash">
+                        </div>
+                        <div class="content-subtaks">
+                            <div class="circle-subtaks">
+                                <img src="assets/circle.png" alt="circle">
+                                <p class="content-subtaks-teks">Low-Fidelity design</p>
+                            </div>
+                            <img src="assets/trash.png" alt="trash">
+                        </div>
+                        <div class="content-subtaks">
+                            <div class="circle-subtaks">
+                                <img src="assets/circle.png" alt="circle">
+                                <p class="content-subtaks-teks">High-Fidelity design</p>
+                            </div>
+                            <img src="assets/trash.png" alt="trash">
+                        </div>
+                        <div class="content-subtaks">
+                            <div class="circle-subtaks">
+                                <img src="assets/circle.png" alt="circle">
+                                <p class="content-subtaks-teks">Design Guidelines</p>
+                            </div>
+                            <img src="assets/trash.png" alt="trash">
+                        </div>
+                    </div>
+                </div>
+                <div class="develop">
+                    <div class="develop-header">
+                        <img src="assets/circle.png" alt="circle">
+                        <div class="develop-text">
+                            <p class="task-text">Development</p>
+                            <div class="develop-info">
+                                <p class="info-text">15 Juni 2022</p>
+                            </div>
+                        </div>
+                    </div>
+                    <img src="assets/Arrow - Down 2.png" alt="arrow">
+                </div>
+                <div class="develop">
+                    <div class="develop-header">
+                        <img src="assets/circle.png" alt="circle">
+                        <div class="develop-text">
+                            <p class="task-text">Launching Wazwez Website</p>
+                            <div class="develop-info">
+                                <p class="info-text">20 Juni 2022</p>
+                            </div>
+                        </div>
+                    </div>
+                    <img src="assets/Arrow - Down 2.png" alt="arrow">
+                </div>
+            </div>
+            <img class="line" src="assets/line.png" alt="line">
+            <div class="foot">
+                <img src="assets/Arrow - Right 2.png" alt="arrow-right">
+                <p class="foot-text">Terselesaikan (3 tugas)</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script>
+    const submitData = () => {
+        const namatugas = document.getElementById("namatugas").value
+        const deskripsi = document.getElementById("deskripsi").value
+        const tanggal = document.getElementById("tanggal").value
+
+
+
+        //for (let i = 0; i < data.length; i++) {
+        //    document.getElementById("namacontent").innerHTML = namatugas
+        //    document.getElementById("deskripsicontent").innerHTML = deskripsi
+        //    document.getElementById("tanggalcontent").innerHTML = tanggal
+        //}
+
+        document.getElementById("namacontent").innerHTML = namatugas
+        document.getElementById("deskripsicontent").innerHTML = deskripsi
+        document.getElementById("tanggalcontent").innerHTML = tanggal
+    }
+</script>
